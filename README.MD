@@ -1,6 +1,6 @@
 # LLM Inference Microservice
 
-This project implements a microservice for sentiment analysis on product reviews using a Large Language Model (LLM). It includes advanced pre-processing and post-processing steps, and integrates with a PostgreSQL database for storing analysis results. The project now supports deployment using Kubernetes and Helm.
+This project implements a microservice for sentiment analysis on product reviews using a Large Language Model (LLM). It includes advanced pre-processing. The project now supports deployment using Kubernetes and Helm.
 
 ## Features
 
