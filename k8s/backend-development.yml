@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 3  # Adjust for scaling
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: rishibrainerhub/llm-app:latest  # Replace with your actual image
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: "500m"      # Adjust based on your needs
+            memory: "1Gi"    # Increased memory for larger models
+          limits:
+            cpu: "2"         # Higher CPU limit for performance
+            memory: "4Gi"    # Increase memory limit to accommodate larger packages
